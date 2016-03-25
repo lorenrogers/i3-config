@@ -23,6 +23,12 @@ bind 156 exec /home/lorentrogers/dev/scripts/display-autodetect
 exec --no-startup-id xsetroot -solid "#333333"
 exec --no-startup-id nm-applet
 
+# Start screen locker
+exec --no-startup-id xautolock -time 10 -locker i3lock --color=333333
+
+# Bind lock screen
+bindsym $mod+q exec i3lock -c 333333
+
 # Set laptop brightness
 bind 232 exec xbacklight -dec 10
 bind 233 exec xbacklight -inc 10
